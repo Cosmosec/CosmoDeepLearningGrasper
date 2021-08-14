@@ -49,4 +49,14 @@ catkin_package(
     EIGEN3
 )
 
-include_director
+include_directories(${catkin_INCLUDE_DIRS})
+##catkin_package()
+find_package(Boost REQUIRED system filesystem date_time thread)
+add_executable(pick_place src/pick_place.cpp)
+target_link_libraries(pick_place ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
+add_executable (pass_through src/pass_throu
