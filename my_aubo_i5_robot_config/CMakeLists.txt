@@ -25,4 +25,28 @@ find_package(catkin REQUIRED COMPONENTS
   rosbag
   tf2_ros
   tf2_eigen
-  darkne
+  darknet_ros_msgs
+  tf2_geometry_msgs
+  roscpp
+  rospy
+  std_msgs
+  message_filters
+  geometry_msgs
+  message_generation
+)
+
+catkin_package(
+  LIBRARIES
+    interactivity_utils
+  INCLUDE_DIRS
+    ${THIS_PACKAGE_INCLUDE_DIRS}
+  CATKIN_DEPENDS
+    moveit_core
+    moveit_visual_tools
+    moveit_ros_planning_interface
+    interactive_markers
+  DEPENDS
+    EIGEN3
+)
+
+include_director
