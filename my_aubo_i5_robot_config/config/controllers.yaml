@@ -11,4 +11,11 @@ controller_list:
       - wrist2_joint
       - wrist3_joint
  - name: gripper_controller
-   action_ns: follo
+   action_ns: follow_joint_trajectory
+   type: FollowJointTrajectory
+   default: true
+   parallel: true
+   joints:
+     - gripper_finger1_joint
+     - gripper_finger2_joint
+
