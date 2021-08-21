@@ -9,4 +9,4 @@ controller_list:
       - wrist3_joint
   - name: fake_gripper_controller
     joints:
-      - gr
+      - gripper_finger1_joint
