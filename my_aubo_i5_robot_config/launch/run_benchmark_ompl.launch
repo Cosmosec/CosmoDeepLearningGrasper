@@ -1,0 +1,7 @@
+<launch>
+
+  <!-- This argument must specify the list of .cfg files to process for benchmarking -->
+  <arg name="cfg" />
+
+  <!-- Load URDF -->
+  <include file="$(find my_aubo_i5_robot_confi
