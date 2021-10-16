@@ -1,0 +1,4 @@
+<launch>
+
+  <!-- This file makes it easy to include different planning pipelines;
+       It is assumed that all planning pipe
