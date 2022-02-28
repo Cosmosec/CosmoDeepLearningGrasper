@@ -41,4 +41,17 @@ void closedGripper(trajectory_msgs::JointTrajectory& posture)
 {
   // BEGIN_SUB_TUTORIAL closed_gripper
   /* Add both finger joints of aubo robot. */
-  posture.j
+  posture.joint_names.resize(2);
+  posture.joint_names[0] = "gripper_finger1_joint";
+  posture.joint_names[1] = "gripper_finger2_joint";
+
+  /* Set them as closed. */
+  posture.points.resize(1);
+  posture.points[0].positions.resize(2);
+  posture.points[0].positions[0] = 0.00;
+  posture.points[0].positions[1] = 0.00;
+  posture.points[0].time_from_start = ros::Duration(0.5);
+  // END_SUB_TUTORIAL
+}
+
+void pick(moveit::planning_int
