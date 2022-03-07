@@ -77,4 +77,12 @@ void pick(moveit::planning_interface::MoveGroupInterface& move_group)
 
  
   // Setting pre-grasp approach
-  // 
+  // ++++++++++++++++++++++++++
+  /* Defined with respect to frame_id */
+  grasps[0].pre_grasp_approach.direction.header.frame_id = "base_link";
+  /* Direction is set as positive x axis */
+  grasps[0].pre_grasp_approach.direction.vector.z = -1.0;
+  grasps[0].pre_grasp_approach.direction.vector.y = -1.0;
+  grasps[0].pre_grasp_approach.direction.vector.x = -1.0;
+
+  //grasps[0].pre_grasp_approach.min_distance = 0.20;
