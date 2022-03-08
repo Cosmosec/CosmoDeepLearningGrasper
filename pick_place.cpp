@@ -86,3 +86,18 @@ void pick(moveit::planning_interface::MoveGroupInterface& move_group)
   grasps[0].pre_grasp_approach.direction.vector.x = -1.0;
 
   //grasps[0].pre_grasp_approach.min_distance = 0.20;
+  grasps[0].pre_grasp_approach.desired_distance = 0.10;
+
+
+
+  // Set support surface as table1.
+  move_group.setSupportSurfaceName("table1");
+  // Call pick to pick up the object using the grasps given
+  move_group.pick("object", grasps);
+  // END_SUB_TUTORIAL
+}
+
+void place(moveit::planning_interface::MoveGroupInterface& group)
+{
+  // 
+  //  - Calling place function m rren
