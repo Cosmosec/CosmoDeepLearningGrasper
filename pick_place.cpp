@@ -120,4 +120,13 @@ void place(moveit::planning_interface::MoveGroupInterface& group)
   // ++++++++++++++++++++++++++
   /* Defined with respect to frame_id */
   place_location[0].pre_place_approach.direction.header.frame_id = "world";
-  /* Direction is se
+  /* Direction is set as negative z axis */
+  place_location[0].pre_place_approach.direction.vector.z = -1.0;
+
+  place_location[0].pre_place_approach.min_distance = 0.095;
+  place_location[0].pre_place_approach.desired_distance = 0.115;
+
+  // Setting post-grasp retreat
+  // ++++++++++++++++++++++++++
+  /* Defined with respect to frame_id */
+  place_location[0].post_place_retreat.direction.header.fram
