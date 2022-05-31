@@ -138,4 +138,16 @@ void place(moveit::planning_interface::MoveGroupInterface& group)
   // Setting posture of eef after placing object
   // +++++++++++++++++++++++++++++++++++++++++++
   /* Similar to the pick case */
-  openGripp
+  openGripper(place_location[0].post_place_posture);
+
+  // Set support surface as table2.
+  group.setSupportSurfaceName("table2");
+  // Call place to place the object using the place locations given.
+  group.place("object", place_location);
+  // END_SUB_TUTORIAL
+}
+
+void addCollisionObjects(moveit::planning_interface::PlanningSceneInterface& planning_scene_interface)
+{
+  // BEGIN_SUB_TUTORIAL table1
+  //
