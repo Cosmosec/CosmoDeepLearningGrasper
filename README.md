@@ -23,4 +23,6 @@ Softwares and libraries required along with their respective installation links 
 - Robotiq 85 Gripper
 
 ## Steps to Run the Programs
-This section includes steps to run all the required programs 
+This section includes steps to run all the required programs along with their respective commands in sequence. It also includes steps to run object detection through darknet_ros and filter out all point cloud data except the object that was chosen using the provided commands. There are specific instructions to execute the Aubo Driver and pick and place the object.
+
+Along with this, it provides a detailed explanation of the inner workings of various sect
